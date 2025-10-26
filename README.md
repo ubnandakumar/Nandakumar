@@ -2,6 +2,16 @@
 
 An intelligent chatbot that accurately classifies user queries as HR-related or not. It uses advanced natural language processing to understand direct questions, indirect speech, and even confusing statements related to Human Resources.
 
+## ⚠️ Getting Import Errors?
+
+If you see: `ImportError: cannot import name 'split_torch_state_dict_into_shards'`
+
+**Quick Fix:**
+- **Windows**: Run `fix_dependencies.bat`
+- **Linux/Mac**: Run `./fix_dependencies.sh`
+
+See **[INSTALL.md](INSTALL.md)** for detailed installation instructions and troubleshooting.
+
 ## Features
 
 - **Accurate Classification**: Uses zero-shot classification with transformer models
@@ -19,25 +29,33 @@ An intelligent chatbot that accurately classifies user queries as HR-related or 
 
 ## Installation
 
-1. **Clone or download this repository**
+### Quick Install (If Everything Works)
 
-2. **Install dependencies**:
 ```bash
 pip install -r requirements.txt
-```
-
-This will install:
-- `transformers`: HuggingFace library for NLP models
-- `torch`: PyTorch for model inference
-- `sentencepiece`: Tokenization library
-- `protobuf`: Protocol buffers for model serialization
-
-3. **First run** (downloads the model, ~1GB):
-```bash
 python hr_intent_classifier.py
 ```
 
-The model will be automatically downloaded and cached on first run.
+### Having Issues? Use the Fix Script
+
+**Windows:**
+```bash
+fix_dependencies.bat
+```
+
+**Linux/Mac:**
+```bash
+chmod +x fix_dependencies.sh
+./fix_dependencies.sh
+```
+
+### Detailed Instructions
+
+See **[INSTALL.md](INSTALL.md)** for:
+- Step-by-step installation guide
+- Troubleshooting common errors
+- Virtual environment setup
+- Version compatibility fixes
 
 ## Usage
 
